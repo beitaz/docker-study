@@ -101,12 +101,12 @@ postgres:
     - '5432'
 ```
 
-**【注意】** `app.links` 必须指定为数据库的名称 `postgres`；注意 `volumes` 指定方式。
+**【注意】** `app.links` 必须指定为数据库的名称 `postgres`；注意 `volumes` 指定方式。
 
 * 镜像操作
 ```SHELL
 $ docker-compose build
 $ docker-compose run --rm app env # 查询运行时环境变量
 $ docker-compose up # 运行镜像
-$ docker-compose run app rake db:create db:migrate 
+$ docker-compose run app rake db:create db:migrate
 ```
