@@ -2,8 +2,8 @@
 
 * 创建项目
 ```SHELL
-$ rails new . -B -f -d postgresql
-$ docker build -t quoyi .
+$ rails new . -B -f -d postgresql # 以当前目录创建项目，-f 强制使用 -d 数据库 postgresql，并 -B 跳过 bundle install
+$ docker build -t quoyi . # 以当前目录下的 Dockerfile 构建 -t 标签名为 quoyi 的镜像
 $ docker-compose build
 $ docker-compose up
 $ docker-compose run app rake db:create db:migrate
